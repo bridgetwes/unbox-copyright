@@ -1,0 +1,12 @@
+
+//from: https://commons.wikimedia.org/wiki/File:Copyright.svg
+
+export const copyright = (
+    <svg width="197px" height="197px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <circle cx="98" cy="98" r="98" fill="black" />
+        <circle cx="98" cy="98" r="78" fill="white" />
+        <circle cx="98" cy="98" r="55" fill="black" />
+        <circle cx="98" cy="98" r="30" fill="white" />
+        <rect x="115" y="85" width="45" height="25" fill="white" />
+    </svg>
+);
