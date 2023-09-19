@@ -6,7 +6,7 @@
 	"title": "Unbox Copyright",
 	"category": "design",
 	"icon": "update",
-	"description": "Add a copyright line with year that automatically updates.",
+	"description": "Add a copyright line with year and site title that automatically updates. Use [current year] and [site title] where you want these items to show in your copyright line. [site title] is pulled from pulled from Settings -> General.",
 	"keywords": [
 		"footer",
 		"current year"

@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Unbox Copyright
- * Description:       WordPress Block to set up a copyright line with auto updating year and site name pulled from Settings -> General
+ * Description:       WordPress Block that sets up a copyright line with auto updating year and site name pulled from Settings -> General
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Version:           1.0
@@ -32,7 +32,7 @@ if ( ! function_exists( 'unbox_copyright_render_block_dynamic_year_block' ) ) {
 		$sitename = get_bloginfo('name');
 
 		$output = str_replace("[current year]", $dynamic_year, $content);
-		$output = str_replace("[site title]", $sitename, $content);
+		$output = str_replace("[site title]", $sitename, $output);
 
 		return $output;
 	}
