@@ -18,11 +18,13 @@ This section describes how to install the plugin and get it working.
 
 e.g.
 
-1. Upload the plugin files to your WordPress site's `/wp-content/plugins/unbox-copyright` directory.
-2. Activate the plugin through the 'Plugins' screen in WordPress
-3. Add the block where you want your copyright line to appear.
-4. Enter your copyright line.
-5. If you want the year to auto update, replace the year in your copyright line with [current year]. If you want to use the Site's Name, found in Settings -> General in your copyright line, replace the site name with [site name]. Both replacements will auto update when either change.
+1. Download the latest release. (See "Releases" in right sidebar of Plugin's GitHub repo. Download the zip file attached to the latest release.)
+2. Go to your WordPress site and navigate to Plugins -> Add New.
+3. Click "Upload Plugin" and select the zip file you downloaded.
+4. Activate the plugin through the 'Plugins' screen in WordPress
+5. Add the block where you want your copyright line to appear.
+6. Enter your copyright line.
+7. If you want the year to auto update, replace the year in your copyright line with [current year]. If you want to use the Site's Name, found in Settings -> General in your copyright line, replace the site name with [site name]. Both replacements will auto update when either change.
 
 
 == Frequently Asked Questions ==
