@@ -18,7 +18,7 @@ This section describes how to install the plugin and get it working.
 
 e.g.
 
-1. Upload the plugin files to the `/wp-content/plugins/unbox-copyright` directory.
+1. Upload the plugin files to your WordPress site's `/wp-content/plugins/unbox-copyright` directory.
 2. Activate the plugin through the 'Plugins' screen in WordPress
 3. Add the block where you want your copyright line to appear.
 4. Enter your copyright line.
@@ -35,7 +35,12 @@ Copyright ©[current year] [site name]. All Rights Reserved.
 
 == Changelog ==
 
+= 1.3 =
+* Change Date: 1/30/2025
+* Added GitHub Actions to create a release with zip file ready to upload to WordPress site.
+
 = 1.2 =
+* Change Date: 1/30/2025
 * Added center alignment option to paragraph containing copyright line. 
 * Added Auto Update Checker to check for updates, and update plugin automatically from GitHub.
 
