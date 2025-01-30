@@ -37,6 +37,10 @@ Copyright ©[current year] [site name]. All Rights Reserved.
 
 == Changelog ==
 
+= 1.3.1 =
+* Change Date: 1/30/2025
+* Fixed issue where release was not updating automatically from GitHub.
+
 = 1.3 =
 * Change Date: 1/30/2025
 * Added GitHub Actions to create a release with zip file ready to upload to WordPress site.
