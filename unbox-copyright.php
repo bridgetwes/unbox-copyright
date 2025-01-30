@@ -4,14 +4,19 @@
  * Description:       WordPress Block that sets up a copyright line with auto updating year and site name pulled from Settings -> General
  * Requires at least: 5.9
  * Requires PHP:      7.0
- * Version:           1.0
+ * Version:           1.2
  * Author:            Bridget Wessel
  * License:           Proprietary
  * License URI:       https://unboxinteractive.com
  * Text Domain:       unbox
+ * GitHub Plugin URI: bridgetwes/unbox-copyright
+ * GitHub Branch:     main
  *
  * @package           create-block
  */
+
+
+require_once plugin_dir_path( __FILE__ ) . 'plugin-update-checker.php';
 
  /**
  * Renders the `unbox-copyright` on the server.

@@ -28,3 +28,10 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# Exclude vendor directory
+/vendor/
+
+# Exclude composer files
+!composer.json
+!composer.lock
