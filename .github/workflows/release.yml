@@ -14,6 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
+    - name: Install Composer Dependencies
+      run: composer install --no-dev --optimize-autoloader
+    
     - name: Create Zip
       run: |
         zip -r unbox-copyright.zip . -x "*/node_modules/*" "*.git*" ".github/*" ".DS_Store" "composer.json" "composer.lock" "package.json" "package-lock.json" 2>/dev/null || :
@@ -37,4 +40,4 @@ jobs:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./unbox-copyright.zip
         asset_name: unbox-copyright.zip
-        asset_content_type: application/zip
+        asset_content_type: application/zip 
