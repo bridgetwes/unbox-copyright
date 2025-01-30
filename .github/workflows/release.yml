@@ -16,7 +16,7 @@ jobs:
     
     - name: Create Zip
       run: |
-        zip -r unbox-copyright.zip . -x "*/node_modules/*" "*/vendor/*" "*.git*" ".github/*" ".DS_Store" "composer.json" "composer.lock" "package.json" "package-lock.json" 2>/dev/null || :
+        zip -r unbox-copyright.zip . -x "*/node_modules/*" "*.git*" ".github/*" ".DS_Store" "composer.json" "composer.lock" "package.json" "package-lock.json" 2>/dev/null || :
       
     - name: Create Release
       id: create_release
