@@ -4,7 +4,7 @@
  * Description:       WordPress Block that sets up a copyright line with auto updating year and site name pulled from Settings -> General
  * Requires at least: 5.9
  * Requires PHP:      7.0
- * Version:           1.3.3
+ * Version:           1.3.4
  * Author:            Bridget Wessel
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -14,6 +14,11 @@
  *
  * @package           create-block
  */
+
+  // Exit if accessed directly
+if (!defined('ABSPATH')) {
+    exit;
+}
 
 
 require_once plugin_dir_path( __FILE__ ) . 'plugin-update-checker.php';

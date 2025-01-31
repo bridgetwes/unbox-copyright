@@ -1,4 +1,10 @@
 <?php
+
+// Exit if accessed directly
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 $plugin_update_checker_path = plugin_dir_path( __FILE__ ) . 'vendor/yahnis-elsts/plugin-update-checker/plugin-update-checker.php';
 
 if (file_exists($plugin_update_checker_path)) {
