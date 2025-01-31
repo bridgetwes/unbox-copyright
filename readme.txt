@@ -25,6 +25,7 @@ e.g.
 5. Add the block where you want your copyright line to appear.
 6. Enter your copyright line.
 7. If you want the year to auto update, replace the year in your copyright line with [current year]. If you want to use the Site's Name, found in Settings -> General in your copyright line, replace the site name with [site name]. Both replacements will auto update when either change.
+8. Plugin will auto update from GitHub when a new release is made.
 
 
 == Frequently Asked Questions ==
