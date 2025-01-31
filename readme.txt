@@ -37,6 +37,10 @@ Copyright ©[current year] [site name]. All Rights Reserved.
 
 == Changelog ==
 
+= 1.3.3 =
+* Change Date: 1/30/2025
+* Testing increasing version number to 1.3.3 to see if it will auto update from GitHub.
+
 = 1.3.2 =
 * Change Date: 1/30/2025
 * Testing increasing version number to 1.3.2 to see if it will auto update from GitHub.
