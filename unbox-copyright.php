@@ -2,9 +2,9 @@
 /**
  * Plugin Name:       Unbox Copyright
  * Description:       WordPress Block that sets up a copyright line with auto updating year and site name pulled from Settings -> General
- * Requires at least: 5.9
- * Requires PHP:      7.0
- * Version:           1.3.4
+ * Requires at least: 6.7
+ * Requires PHP:      7.4
+ * Version:           1.3.5
  * Author:            Bridget Wessel
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
