@@ -1,5 +1,12 @@
 {
+    "name": "your-vendor/your-plugin-name",
+    "description": "Your plugin description",
+    "type": "wordpress-plugin",
     "require": {
-        "yahnis-elsts/plugin-update-checker": "^5.5"
+        "yahnis-elsts/plugin-update-checker": "^5.5",
+        "php": ">=7.4"
+    },
+    "config": {
+        "vendor-dir": "vendor"
     }
 }

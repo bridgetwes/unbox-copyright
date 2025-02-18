@@ -16,11 +16,14 @@ function unbox_copyright_plugin_updater() {
     if ( class_exists( 'YahnisElsts\PluginUpdateChecker\v5\PucFactory' ) ) {
         $myUpdateChecker = PucFactory::buildUpdateChecker(
             'https://github.com/bridgetwes/unbox-copyright/',
-            plugin_dir_path( __FILE__ ) . 'unbox-copyright.php', // Change to point to main plugin file
+            __FILE__,  // This should point to your main plugin file
             'unbox-copyright'
         );
         
-        // Set the branch that contains the stable release.
+        // Enable release assets (zip files)
+        $myUpdateChecker->getVcsApi()->enableReleaseAssets();
+        
+        // Set the stable release branch
         $myUpdateChecker->setBranch('main');        
     }
 }
