@@ -2,7 +2,7 @@
 Contributors:      Bridget Wessel
 Tags:              block
 Tested up to:      6.7.2
-Stable tag:        1.3.7
+Stable tag:        1.3.8
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,7 +34,11 @@ Copyright ©[current year] [site title]. All Rights Reserved.
 
 == Changelog ==
 
-= 1.3.6 =
+= 1.3.8 =
+* Change Date: 2/18/2025
+* Got right update checker working.
+
+= 1.3.7 =
 * Change Date: 2/18/2025
 * Added vendor to plugin files
 
