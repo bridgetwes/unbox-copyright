@@ -16,17 +16,14 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
  * @return {WPElement} Element to render.
  */
 export default function save({ attributes }) {
-    const { input, textAlign } = attributes;
-    
-    const blockProps = useBlockProps.save({
-        className: textAlign ? `has-text-align-${textAlign}` : ''
-    });
+    const blockProps = useBlockProps.save();
 
     return (
-        <RichText.Content
-            { ...blockProps }
-            tagName="p"
-            value={ input }
-        />
+        <div {...blockProps}>
+            <RichText.Content
+                tagName="p"
+                value={attributes.input}
+            />
+        </div>
     );
 }

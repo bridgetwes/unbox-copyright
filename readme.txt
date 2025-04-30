@@ -2,7 +2,7 @@
 Contributors:      Bridget Wessel
 Tags:              block
 Tested up to:      6.7.2
-Stable tag:        1.3.8
+Stable tag:        1.3.9
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,8 +31,15 @@ Useful in Block Themes to add a copyright line in your footer template part. Add
 [current year] and [site title]. Example:
 Copyright ©[current year] [site title]. All Rights Reserved.
 
+== Dev NOTES ==
+I'm unable to get the block to allow typography settings besides font size and line height. It seems to be a limitation of WordPress. Put the block in a group and set font settings on the group.
+
 
 == Changelog ==
+
+= 1.3.9 =
+* Date: 4/30/2025
+* Added label with shortcodes to add to string so can see example after starting to enter value.
 
 = 1.3.8 =
 * Change Date: 2/18/2025

@@ -27,7 +27,13 @@
 		"typography": {
 			"fontSize": true,
 			"lineHeight": true,
-			"textAlign": true
+			"textAlign": true,
+			"fontFamily": true,
+			"fontWeight": true,
+			"fontStyle": true,
+			"letterSpacing": true,
+			"textTransform": true,
+			"textDecoration": true
 		}
 	},
 	"attributes": {

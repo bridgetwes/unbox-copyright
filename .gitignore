@@ -31,6 +31,9 @@ node_modules/
 # dotenv environment variables file
 .env
 
+#editorconfig
+.editorconfig
+
 # Exclude composer files
 !composer.json
 !composer.lock

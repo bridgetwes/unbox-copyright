@@ -1,7 +1,7 @@
 {
 	"name": "unbox-copyright",
 	"version": "0.1.0",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "Display the copyright and site name in a block.",
 	"author": "Bridget Wessel",
 	"license": "Proprietary",
 	"main": "build/index.js",
@@ -15,7 +15,7 @@
 		"start": "wp-scripts start"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^30.10.0"
+		"@wordpress/scripts": "^30.7.0"
 	},
 	"dependencies": {
 		"@wordpress/date": "^4.30.0"
