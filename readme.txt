@@ -2,7 +2,7 @@
 Contributors:      Bridget Wessel
 Tags:              block
 Tested up to:      6.7.2
-Stable tag:        1.3.9
+Stable tag:        1.3.10
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,10 @@ I'm unable to get the block to allow typography settings besides font size and l
 
 
 == Changelog ==
+
+= 1.3.10 =
+* Date: 5/2/2025
+* Moved label to sidebar block settings so easier to style block in template and can copy example.
 
 = 1.3.9 =
 * Date: 4/30/2025

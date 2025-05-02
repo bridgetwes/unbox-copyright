@@ -19,11 +19,10 @@ export default function save({ attributes }) {
     const blockProps = useBlockProps.save();
 
     return (
-        <div {...blockProps}>
-            <RichText.Content
-                tagName="p"
-                value={attributes.input}
-            />
-        </div>
+        <RichText.Content
+            { ...blockProps }
+            tagName="p"
+            value={ attributes.input }
+        />
     );
 }

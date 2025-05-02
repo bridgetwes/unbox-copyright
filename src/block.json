@@ -2,11 +2,11 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
 	"name": "unbox/copyright",
-	"version": "0.1.0",
+	"version": "1.3.10",
 	"title": "Copyright Line",
 	"category": "design",
 	"icon": "update",
-	"description": "Add a copyright line with year and site title that automatically updates. Use [current year] and [site title] where you want these items to show in your copyright line. [site title] is pulled from pulled from Settings -> General.",
+	"description": "WordPress Block to set up a copyright line with auto updating year and Site Title pulled from Settings -> General",
 	"keywords": [
 		"footer",
 		"current year"

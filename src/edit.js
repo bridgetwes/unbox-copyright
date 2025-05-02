@@ -12,7 +12,8 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { useBlockProps, RichText } from '@wordpress/block-editor';
-import { useId } from 'react';
+import { PanelBody } from '@wordpress/components';
+import { InspectorControls } from '@wordpress/block-editor';
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * Those files can contain any CSS code that gets applied to the editor.
@@ -32,20 +33,26 @@ import './editor.scss';
  */
 
 export default function Edit({ attributes, setAttributes }) {
-	const blockProps = useBlockProps();
-	const labelId = useId();
-
+	const input = attributes.input ? attributes.input : __("©[current year] [site title]. All rights reserved.", 'unbox');
+	
 	return (
-		<div {...blockProps}>
-			<label id={labelId} className="unbox-copyright-label">{__("©: [current year] and [site title] will be replaced with the actual values on the frontend. Example: ©[current year] [site title]. All rights reserved.", 'unbox')}</label>
+		<>
+			<InspectorControls>
+				<PanelBody 
+					title={__('Copyright Text', 'unbox')} 
+					initialOpen={true}
+				>
+					<p>{__('[current year] and [site title] will be replaced with the actual values on the frontend.', 'unbox')}</p>
+					<p>{__('Example: ©[current year] [site title]. All rights reserved.', 'unbox')}</p>
+				</PanelBody>
+			</InspectorControls>
 			<RichText
+				{...useBlockProps()}
 				tagName="p"
-				className="unbox-copyright-text"
 				onChange={(newInput) => setAttributes({ input: newInput })}
-				value={attributes.input}
-				placeholder={__("", 'unbox')}
-				aria-describedby={labelId}
+				value={input}
+				placeholder={__("Example: ©[current year] [site title]. All rights reserved.", 'unbox')}
 			/>
-		</div>
+		</>
 	);
 }
