@@ -2,7 +2,7 @@
 Contributors:      Bridget Wessel
 Tags:              block
 Tested up to:      6.7.2
-Stable tag:        1.3.10
+Stable tag:        1.3.11
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,10 @@ I'm unable to get the block to allow typography settings besides font size and l
 
 
 == Changelog ==
+
+= 1.3.11 =
+* Date: 6/3/2025
+* Updated security vulnerability in tar-fs npm script
 
 = 1.3.10 =
 * Date: 5/2/2025
