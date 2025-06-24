@@ -4,7 +4,7 @@
  * Description:       WordPress Block that sets up a copyright line with auto updating year and site name pulled from Settings -> General
  * Requires at least: 6.7
  * Requires PHP:      7.4
- * Version:           1.3.12
+ * Version:           1.3.13
  * Author:            Bridget Wessel
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -21,17 +21,12 @@ if (!defined('ABSPATH')) {
 }
 
 /**
- * Check if unbox-github-updater plugin is active and modify plugin description
+ * Check if unbox-github-updater plugin is active and show warning
  */
 function unbox_copyright_check_dependencies() {
-    // Only run on the plugins page
-    if (!is_admin() || !isset($_GET['page']) || $_GET['page'] !== 'plugins.php') {
-        return;
-    }
-    
     // Check if unbox-github-updater plugin is active
     if (!is_plugin_active('unbox-github-updater/unbox-github-updater.php')) {
-        // Add filter to modify plugin description
+        // Add warning to plugin row meta
         add_filter('plugin_row_meta', 'unbox_copyright_add_dependency_warning', 10, 2);
     }
 }
@@ -42,7 +37,7 @@ add_action('admin_init', 'unbox_copyright_check_dependencies');
  */
 function unbox_copyright_add_dependency_warning($links, $file) {
     if ($file === plugin_basename(__FILE__)) {
-        $warning = '<span style="color: #d63638; font-weight: bold;">⚠️ Warning: The Unbox GitHub Updater plugin is not installed or active. This plugin is required for automatic updates. You can download the lateste release of the Unbox GitHub Updater <a href="https://github.com/bridgetwes/unbox-github-updater">here</a>. </span>';
+        $warning = '<div style="margin-top: 8px; padding: 8px; background-color: #fff3cd; border: 1px solid #ffeaa7; border-radius: 4px; color: #856404;"><strong>⚠️ Warning:</strong> The Unbox GitHub Updater plugin is not installed or active. This plugin is required for automatic updates. You can download the latest release of the Unbox GitHub Updater <a href="https://github.com/bridgetwes/unbox-github-updater">here</a>.</div>';
         $links[] = $warning;
     }
     return $links;

@@ -2,7 +2,7 @@
 Contributors:      Bridget Wessel
 Tags:              block
 Tested up to:      6.7.2
-Stable tag:        1.3.12
+Stable tag:        1.3.13
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,14 @@ I'm unable to get the block to allow typography settings besides font size and l
 
 
 == Changelog ==
+
+= 1.3.13 =
+* Date: 6/25/2025
+* Moved Update to separate update plugin
+
+= 1.3.12 =
+* Date: 6/25/2025
+* Working on separte update plugin
 
 = 1.3.11 =
 * Date: 6/3/2025
