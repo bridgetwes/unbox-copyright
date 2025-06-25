@@ -16,8 +16,5 @@
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^30.7.0"
-	},
-	"dependencies": {
-		"@wordpress/date": "^4.30.0"
 	}
 }
