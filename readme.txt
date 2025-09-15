@@ -2,7 +2,7 @@
 Contributors:      Bridget Wessel
 Tags:              block
 Tested up to:      6.7.2
-Stable tag:        1.3.14
+Stable tag:        1.3.15
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
