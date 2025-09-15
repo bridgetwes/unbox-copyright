@@ -37,9 +37,13 @@ I'm unable to get the block to allow typography settings besides font size and l
 
 == Changelog ==
 
+= 1.3.15 =
+* Date: 9/15/2025
+* npm audit fix update, and npx npm-check-updates -u --dep dev
+
 = 1.3.14 =
 * Date: 6/26/2025
-* Updated @wordpress/scripts
+* Updated @wordpress/scripts, and npx npm-check-updates -u --dep dev
 
 = 1.3.13 =
 * Date: 6/25/2025
