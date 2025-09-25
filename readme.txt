@@ -2,7 +2,7 @@
 Contributors:      Bridget Wessel
 Tags:              block
 Tested up to:      6.7.2
-Stable tag:        1.3.15
+Stable tag:        1.3.16
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,9 @@ I'm unable to get the block to allow typography settings besides font size and l
 
 
 == Changelog ==
+= 1.3.16 = 
+* Date: 3/25/2025
+* Updated WordPress Scripts to 3.24.0
 
 = 1.3.15 =
 * Date: 9/15/2025
