@@ -1,8 +1,8 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "name": "unbox/copyright",
-  "version": "1.3.12",
+  "version": "1.3.17",
   "title": "Copyright Line",
   "category": "design",
   "icon": "update",
