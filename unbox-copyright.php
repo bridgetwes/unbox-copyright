@@ -4,7 +4,7 @@
  * Description:       WordPress Block that sets up a copyright line with auto updating year and site name pulled from Settings -> General
  * Requires at least: 6.7
  * Requires PHP:      7.4
- * Version:           1.3.17
+ * Version:           1.3.18
  * Author:            Bridget Wessel
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -59,12 +59,18 @@ if ( ! function_exists( 'unbox_copyright_render_block_dynamic_year_block' ) ) {
 		$current_date = current_datetime();
 		$dynamic_year = $current_date->format('Y');
 
-		$sitename = get_bloginfo('name');
+		// Escape site name for safe output
+		$sitename = esc_html( get_bloginfo('name') );
 
-		$output = str_replace("[current year]", $dynamic_year, $content);
-		$output = str_replace("[site title]", $sitename, $output);
+		// Perform case-insensitive replacements on the content
+		// This allows users to type [current year], [Current Year], [CURRENT YEAR], etc.
+		// Using str_ireplace() is safer than regex as it doesn't interpret special characters
+		$output = str_ireplace("[current year]", $dynamic_year, $content);
+		$output = str_ireplace("[site title]", $sitename, $output);
 
-		return $output;
+		// Sanitize output to allow safe HTML tags while preventing XSS
+		// wp_kses_post() allows the same HTML tags that are allowed in post content
+		return wp_kses_post( $output );
 	}
 }
 
