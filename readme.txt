@@ -2,7 +2,7 @@
 Contributors:      Bridget Wessel
 Tags:              block
 Tested up to:      6.7.2
-Stable tag:        1.3.18
+Stable tag:        1.3.19
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,11 @@ Copyright ©[current year] [site title]. All Rights Reserved.
 I'm unable to get the block to allow typography settings besides font size and line height. It seems to be a limitation of WordPress. Put the block in a group and set font settings on the group.
 
 == Changelog ==
+
+= 1.3.19 = 
+* Date: 12/01/2025
+* Updated npm audit to try to get rid of warning
+
 = 1.3.18 = 
 * Date: 11/27/2025
 * Updated @wordpress/scripts to version 31.1.0
