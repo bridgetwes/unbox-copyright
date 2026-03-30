@@ -36,6 +36,10 @@ I'm unable to get the block to allow typography settings besides font size and l
 
 == Changelog ==
 
+= 1.3.20 = 
+* Date: 3/30/2026
+* @wordpress/scripts  ^31.1.0  →  ^31.7.0
+
 = 1.3.19 = 
 * Date: 12/01/2025
 * Updated npm audit to try to get rid of warning
