@@ -28,12 +28,12 @@
 			"fontSize": true,
 			"lineHeight": true,
 			"textAlign": true,
-			"fontFamily": true,
-			"fontWeight": true,
-			"fontStyle": true,
-			"letterSpacing": true,
-			"textTransform": true,
-			"textDecoration": true
+			"__experimentalFontFamily": true,
+			"__experimentalFontStyle": true,
+			"__experimentalFontWeight": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true
 		}
 	},
 	"attributes": {

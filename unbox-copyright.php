@@ -4,7 +4,7 @@
  * Description:       WordPress Block that sets up a copyright line with auto updating year, site name, and tagline pulled from Settings -> General
  * Requires at least: 6.7
  * Requires PHP:      7.4
- * Version:           1.3.21
+ * Version:           1.3.22
  * Author:            Bridget Wessel
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
