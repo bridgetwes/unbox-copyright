@@ -6,7 +6,7 @@
 	"title": "Copyright Line",
 	"category": "design",
 	"icon": "update",
-	"description": "WordPress Block to set up a copyright line with auto updating year and Site Title pulled from Settings -> General",
+	"description": "WordPress Block to set up a copyright line with auto updating year, Site Title, and Tagline pulled from Settings -> General",
 	"keywords": [
 		"footer",
 		"current year"
@@ -40,7 +40,8 @@
 		"input": {
 			"type": "string",
 			"source": "html",
-			"selector": "p"
+			"selector": "p",
+			"default": "©[current year] [site title]. All rights reserved."
 		}
 	},
 	"textdomain": "unbox",

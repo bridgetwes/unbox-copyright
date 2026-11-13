@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name:       Unbox Copyright
- * Description:       WordPress Block that sets up a copyright line with auto updating year and site name pulled from Settings -> General
+ * Description:       WordPress Block that sets up a copyright line with auto updating year, site name, and tagline pulled from Settings -> General
  * Requires at least: 6.7
  * Requires PHP:      7.4
- * Version:           1.3.20
+ * Version:           1.3.21
  * Author:            Bridget Wessel
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -43,33 +43,81 @@ function unbox_copyright_add_dependency_warning($links, $file) {
     return $links;
 }
 
- /**
+/**
+ * Default copyright line. Keep this in sync with DEFAULT_COPYRIGHT in src/edit.js
+ * and the input attribute default in src/block.json.
+ *
+ * @return string
+ */
+function unbox_copyright_default_text() {
+	return __( '©[current year] [site title]. All rights reserved.', 'unbox' );
+}
+
+/**
+ * Use the default line when the saved block has no text.
+ *
+ * The editor fallback is not written into post content until the field changes,
+ * so an unedited block is stored as an empty paragraph.
+ *
+ * @param string $content Saved block HTML.
+ * @return string
+ */
+function unbox_copyright_with_default_text( $content ) {
+	$plain = str_replace( "\xc2\xa0", '', trim( wp_strip_all_tags( (string) $content ) ) );
+
+	if ( $plain !== '' ) {
+		return $content;
+	}
+
+	$default = esc_html( unbox_copyright_default_text() );
+	$count   = 0;
+	$updated = preg_replace_callback(
+		'/(<p\b[^>]*>)(.*?)(<\/p>)/is',
+		static function ( $matches ) use ( $default ) {
+			return $matches[1] . $default . $matches[3];
+		},
+		(string) $content,
+		1,
+		$count
+	);
+
+	if ( $count && is_string( $updated ) ) {
+		return $updated;
+	}
+
+	return '<p class="wp-block-unbox-copyright">' . $default . '</p>';
+}
+
+/**
  * Renders the `unbox-copyright` on the server.
  *
  * @link   https://developer.wordpress.org/reference/functions/current_datetime/
- * @param  array    $attributes Block attributes.
- * @param  string   $content    Block default content.
- * @param  WP_Block $block      Block instance.
- * @return string   Returns the content replacing [current year] and [site title] wrapped in a <p> tag.
+ * @param  array    $block_attributes Block attributes.
+ * @param  string   $content          Block default content.
+ * @param  WP_Block $block            Block instance.
+ * @return string   Returns the content replacing [current year], [site title], and [tag line] wrapped in a <p> tag.
  */
 if ( ! function_exists( 'unbox_copyright_render_block_dynamic_year_block' ) ) {
 	function unbox_copyright_render_block_dynamic_year_block( $block_attributes, $content, $block ) {
-		//Replace what is saved in the page with the current year.
 		// Get the current year.
 		$current_date = current_datetime();
-		$dynamic_year = $current_date->format('Y');
+		$dynamic_year = $current_date->format( 'Y' );
 
-		// Escape site name for safe output
-		$sitename = esc_html( get_bloginfo('name') );
+		// Escape site name and tagline for safe output.
+		$sitename = esc_html( get_bloginfo( 'name' ) );
+		$tagline  = esc_html( get_bloginfo( 'description' ) );
 
-		// Perform case-insensitive replacements on the content
+		// Perform case-insensitive replacements on the content.
 		// This allows users to type [current year], [Current Year], [CURRENT YEAR], etc.
-		// Using str_ireplace() is safer than regex as it doesn't interpret special characters
-		$output = str_ireplace("[current year]", $dynamic_year, $content);
-		$output = str_ireplace("[site title]", $sitename, $output);
+		// Using str_ireplace() is safer than regex as it doesn't interpret special characters.
+		// Replace [tag line] last so a tagline cannot be altered by the other tokens.
+		$output = unbox_copyright_with_default_text( $content );
+		$output = str_ireplace( '[current year]', $dynamic_year, $output );
+		$output = str_ireplace( '[site title]', $sitename, $output );
+		$output = str_ireplace( '[tag line]', $tagline, $output );
 
-		// Sanitize output to allow safe HTML tags while preventing XSS
-		// wp_kses_post() allows the same HTML tags that are allowed in post content
+		// Sanitize output to allow safe HTML tags while preventing XSS.
+		// wp_kses_post() allows the same HTML tags that are allowed in post content.
 		return wp_kses_post( $output );
 	}
 }

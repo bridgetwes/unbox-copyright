@@ -2,7 +2,7 @@
 Contributors:      Bridget Wessel
 Tags:              block
 Tested up to:      6.7.2
-Stable tag:        1.3.19
+Stable tag:        1.3.21
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,7 @@ Useful in Block Themes to add a copyright line in your footer template part. Add
 4. Activate the plugin through the 'Plugins' screen in WordPress
 5. Add the block where you want your copyright line to appear.
 6. Enter your copyright line.
-7. If you want the year to auto update, replace the year in your copyright line with [current year]. If you want to use the Site's Title, found in Settings -> General in your copyright line, replace the site title with [site title]. Both replacements will auto update when either change.
+7. If you want the year to auto update, replace the year in your copyright line with [current year]. If you want to use the Site's Title, found in Settings -> General in your copyright line, replace the site title with [site title], replace tag line with [tag line]. Both replacements will auto update when either change.
 8. Plugin will auto update from GitHub when a new release is made.
 
 
@@ -35,6 +35,11 @@ Copyright ©[current year] [site title]. All Rights Reserved.
 I'm unable to get the block to allow typography settings besides font size and line height. It seems to be a limitation of WordPress. Put the block in a group and set font settings on the group.
 
 == Changelog ==
+
+= 1.3.21 = 
+* Date: 11/13/2026
+* @wordpress/scripts  ^31.7.0 -> ^37.1.0
+* Added [tag line] option
 
 = 1.3.20 = 
 * Date: 3/30/2026
